@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Registration form for musical events" />
+    <title>Musical Events</title>
+    <link rel="icon" href="./app/assets/music-svgrepo-com.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,100&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+  </head>
+  <body>
+    <div class="hero-image"></div>
+    <main class="container">
+      <section class="register">
+        <div class="register-date">
+          <span class="register-now">May 25, 2021</span>
+        </div>
+        <form class="register-form" action="">
+          <div class="register-form-container">
+            <div>
+              <label for="firstName">First name:</label>
+              <input
+                id="firstName"
+                type="text"
+                placeholder="Enter your first name."
+                name="first-name"
+                title="Name only accept letters"
+                required
+                pattern="^[A-Za-zÑÁÉÍÓÚáéíóú\s]+$"
+                autocomplete="off"
+              />
+            </div>
+            <div>
+              <label for="lastName">Last name:</label>
+              <input
+                id="lastName"
+                type="text"
+                placeholder="Enter your last name."
+                title="lastname only accept letters"
+                name="last-name"
+                pattern="^[A-Za-zÑÁÉÍÓÚáéíóú\s]+$"
+                autocomplete="off"
+                required
+              />
+            </div>
+          </div>
+          <div class="register-form-container">
+            <div>
+              <label for="email">Email:</label>
+              <input
+                id="email"
+                type="email"
+                placeholder="Enter your email."
+                title="Wrong email, please check it"
+                name="email"
+                autocomplete="off"
+                pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})"
+                required
+              />
+            </div>
+            <div>
+              <label for="phone">Phone:</label>
+              <input
+                id="phone"
+                type="tel"
+                placeholder="Enter your phone number."
+                title="Wrong phone, please check it"
+                name="phone"
+                autocomplete="off"
+                required
+              />
+            </div>
+          </div>
+          <div>
+            <label for="">Select type of entry :</label>
+            <select name="entry" required>
+              <option value="" disabled selected>Choose one option</option>
+              <option value="VIP">VIP</option>
+              <option value="general">general</option>
+              <option value="promotional">promotional</option>
+            </select>
+          </div>
+          <div>
+            <input type="checkbox" name="terms" required />
+            <label>I accept terms & conditions</label>
+          </div>
+          <div>
+            <input
+              id="button-submit"
+              type="submit"
+              value="Register for this event"
+              name="event"
+            />
+          </div>
+        </form>
+        <div class="footer-list none">
+          <a href="/evento/front/pages/users/users.html">
+            <i class="fa-solid fa-list"></i>
+            <span>Check registration list </span>
+          </a>
+        </div>
+      </section>
+      <footer class="footer">
+        <h2>SHARE</h2>
+        <div class="footer-social-media">
+          <a href="https://facebook.com" target="_blank" rel="noopener">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+
+          <a href="https://twitter.com" target="_blank" rel="noopener">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+
+          <a href="https://tiktok.com" target="_blank" rel="noopener">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+
+          <a href="https://instagram.com" target="_blank" rel="noopener">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+        <div class="footer-person">
+          <h2 class="footer-card-title">GUESTS</h2>
+          <figure class="footer-card">
+            <img src="./assets/img/person-1.jpg" alt="" />
+            <div>
+              <h3 class="footer-card-name">Jon Doe 1</h3>
+              <p class="footer-card-career">Co-funder</p>
+            </div>
+          </figure>
+          <figure class="footer-card">
+            <img src="./assets/img/person-2.jpg" alt="" />
+            <div>
+              <h3 class="footer-card-name">Jon Doe 2</h3>
+              <p class="footer-card-career">CEO</p>
+            </div>
+          </figure>
+        </div>
+        <div class="footer-person">
+          <h2 class="footer-card-title">HOSTER BY</h2>
+          <figure class="footer-card">
+            <img src="./assets/img/person-1.jpg" alt="" />
+            <div>
+              <h3 class="footer-card-name">Jon Doe 1</h3>
+              <p class="footer-card-career">Singer</p>
+            </div>
+          </figure>
+        </div>
+        <div class="footer-list">
+          <a href="http://localhost:80/evento/front/pages/users/users.html">
+            <i class="fa-solid fa-list"></i>
+            <span>Check registration list </span>
+          </a>
+        </div>
+        <div class="footer-company">
+          <a href="http://localhost:80/evento/front/index.html">
+            <img src="./assets/img/guitar.png" alt="" />
+          </a>
+          <span>© 2023 Music productions.</span>
+        </div>
+      </footer>
+    </main>
+
+    <script src="./index.js" type="module"></script>
+  </body>
+</html>
